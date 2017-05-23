@@ -19,7 +19,10 @@ set textwidth=80
 :nnoremap :s :%s
 
 "exercise in zhejiang univercity pat, using copy whole file a lot
-nnoremap gga ggVG"+y
+nnoremap gga ggVG"*y
+nnoremap ,p "*p
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<cr>
 
 :iabbrev adn and
 :iabbrev waht what
@@ -116,9 +119,9 @@ endif
 "
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
-packadd matchit
+"packadd matchit
 
 noremap <C-L> <Esc>:TlistToggle<CR><c-w>h
 
 :colorscheme industry
-execute pathogen#infect()
+"execute pathogen#infect()
